@@ -11,8 +11,8 @@ const routes = [
     component: () => import('layouts/LoginLayout.vue'),
   },
   {
-    name: 'registe',
-    path: '/registe',
+    name: 'register',
+    path: '/register',
     component: () => import('layouts/RegisteLayout.vue'),
   },
 

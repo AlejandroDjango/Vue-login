@@ -2,7 +2,7 @@
   <div class="home">
     <navigation/>
     <h1>Home</h1>
-    <p v-if="userLogged">User loggued: {{userLogged}}</p>
+    <p v-if="userLogged">User logged: {{userLogged}}</p>
   </div>
 </template>
 
