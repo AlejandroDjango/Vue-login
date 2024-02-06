@@ -1,26 +1,17 @@
 <template>
   <div class="home">
-    <navigation/>
+    <navigation />
     <h1>Home</h1>
-    <p v-if="userLogged">User loggued: {{userLogged}}</p>
+    <p v-if="userLogged">User loggued: {{ userLogged }}</p>
   </div>
 </template>
 
-<script>
-import Navigation from "src/components/Navigation";
-import auth from "src/logic/auth";
-export default {
-  name: "HomeLayout",
-  components: {
-    navigation: Navigation
-  },
-  computed: {
-    userLogged() {
-      return auth.getUserLogged();
-    }
-  }
-};
-</script>
+<script setup>
+import Navigation from "src/components/NavigationComp.vue";
+import auth from "src/auth";
+import { computed } from "vue";
 
-<style>
-</style>
+const userLogged = computed(() => {
+  return auth.getUserLogged();
+});
+</script>

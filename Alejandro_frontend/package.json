@@ -2,7 +2,7 @@
   "name": "alejandro-frontend",
   "version": "0.0.1",
   "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "productName": "FrontEnd Alejandro",
   "author": "AlejandroDjango <proyectoalejandrodjango@gmail.com>",
   "private": true,
   "scripts": {
