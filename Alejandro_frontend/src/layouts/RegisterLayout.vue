@@ -34,26 +34,23 @@
   </div>
 </template>
 
-<script>
-import auth from "@/logic/auth";
-export default {
-  data: () => ({
-    email: "",
-    password: "",
-    passwordRepeat: "",
-    error: false,
-  }),
-  methods: {
-    async register() {
-      try {
-        await auth.register(this.email, this.password);
-        this.$router.push("/");
-      } catch (error) {
-        console.log(error);
-      }
-    },
-  },
+<script setup>
+import auth from "src/auth";
+import { ref } from "vue";
+
+const email = ref("");
+const password = ref("");
+const passwordRepeat = ref("");
+
+const register = async () => {
+  try {
+    await auth.register(email.value, password.value);
+    this.$router.push("/");
+  } catch (error) {
+    console.log(error);
+  }
 };
+
 </script>
 
 <style lang="scss" scoped>

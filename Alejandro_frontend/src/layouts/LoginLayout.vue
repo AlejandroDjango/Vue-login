@@ -31,29 +31,26 @@
   </div>
 </template>
 
-<script>
-import auth from "@/logic/auth";
-export default {
-  data: () => ({
-    email: "",
-    password: "",
-    error: false,
-  }),
-  methods: {
-    async login() {
-      try {
-        await auth.login(this.email, this.password);
-        const user = {
-          email: this.email
-        };
-        auth.setUserLogged(user);
-        this.$router.push("/");
-      } catch (error) {
-        console.log(error);
-        this.error = true;
-      }
-    },
-  },
+<script setup>
+import auth from "src/auth";
+import { ref } from "vue";
+
+const email = ref("");
+const password = ref("");
+const error = ref(false);
+
+const login = async () => {
+  try {
+    await auth.login(email.value, password.value);
+    const user = {
+      email: email.value,
+    };
+    auth.setUserLogged(user);
+    this.$router.push("/");
+  } catch (error) {
+    console.log(error);
+    error.value = true;
+  }
 };
 </script>
 

@@ -12,10 +12,7 @@
   </ul>
 </template>
 
-<script>
-export default {
-  name: "Navigation"
-};
+<script setup>
 </script>
 
 <style scoped>
