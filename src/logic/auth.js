@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const ENDPOINT_PATH = "https://reqres.in/api/";
+const ENDPOINT_PATH = "http://alejandrodjango.pythonanywhere.com/api/";
 
 export default {
   setUserLogged(userLogged) {
