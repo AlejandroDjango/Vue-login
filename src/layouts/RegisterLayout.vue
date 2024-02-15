@@ -1,4 +1,4 @@
-<template>
+ç<template>
   <div class="register">
     <h1 class="title">Sign Up</h1>
     <form action class="form" @submit.prevent="register">
@@ -19,14 +19,14 @@
         id="password"
         placeholder="Password"
       />
-      <label class="form-label" for="#password-repeat"
+      <label class="form-label" for="#password-2"
         >Repite la contraeña:</label
       >
       <input
-        v-model="passwordRepeat"
+        v-model="password2"
         class="form-input"
         type="password"
-        id="password-repeat"
+        id="password-2"
         placeholder="Password"
       />
       <input class="form-submit" type="submit" value="Sign Up" />
@@ -35,18 +35,19 @@
 </template>
 
 <script>
-import auth from "@/logic/auth";
+import auth from "@/auth";
 export default {
   data: () => ({
     email: "",
     password: "",
-    passwordRepeat: "",
+    password2: "",
     error: false,
   }),
   methods: {
     async register() {
+      console.log(password2)
       try {
-        await auth.register(this.email, this.password);
+        await auth.register(this.email, this.password, this.password2);
         this.$router.push("/");
       } catch (error) {
         console.log(error);

@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const ENDPOINT_PATH = "http://alejandrodjango.pythonanywhere.com/api/";
+
 
 export default {
   setUserLogged(userLogged) {
@@ -11,11 +11,13 @@ export default {
     return Cookies.get("userLogged");
   },
   register(email, password, password2) {
-    const user = { email, password, password2 };
-    return axios.post(ENDPOINT_PATH+"register", user);
+    let username = email
+    console.log(password2)
+    const user = { username, email, password, password2 };
+    return axios.post("/api/register/", user);
   },
   login(email, password) {
     const user = { email, password };
-    return axios.post(ENDPOINT_PATH+"login", user);
+    return axios.post("/api/login/", user);
   },
 };

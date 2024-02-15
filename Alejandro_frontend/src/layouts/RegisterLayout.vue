@@ -44,7 +44,7 @@ const passwordRepeat = ref("");
 
 const register = async () => {
   try {
-    await auth.register(email.value, password.value);
+    await auth.register(email.value, password.value, passwordRepeat.value);
     this.$router.push("/");
   } catch (error) {
     console.log(error);
