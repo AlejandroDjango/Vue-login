@@ -10,8 +10,8 @@ export default {
   getUserLogged() {
     return Cookies.get("userLogged");
   },
-  register(user, email, password, password2) {
-    user = { user, email, password, password2 };
+  register(email, password, password2) {
+    const user = { email, password, password2 };
     return axios.post(ENDPOINT_PATH+"register", user);
   },
   login(email, password) {
