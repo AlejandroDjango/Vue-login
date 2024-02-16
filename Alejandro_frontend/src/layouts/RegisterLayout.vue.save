@@ -37,9 +37,8 @@
 <script setup>
 import auth from "src/auth";
 import { ref } from "vue";
-import { useRouter } from 'vue-router'
+import Router from "src/router";
 
-const router = useRouter()
 const email = ref("");
 const password = ref("");
 const passwordRepeat = ref("");
@@ -47,9 +46,9 @@ const passwordRepeat = ref("");
 const register = async () => {
   try {
     await auth.register(email.value, password.value, passwordRepeat.value);
-    router.push('/');
+    Router.push("/");
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
   }
 };
 
