@@ -43,6 +43,7 @@ const router = useRouter()
 const email = ref("");
 const password = ref("");
 const passwordRepeat = ref("");
+let message;
 
 const register = async () => {
   try {
