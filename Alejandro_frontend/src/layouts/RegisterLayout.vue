@@ -43,24 +43,27 @@ const router = useRouter()
 const email = ref("");
 const password = ref("");
 const passwordRepeat = ref("");
-let message;
 
 const register = async () => {
   try {
     await auth.register(email.value, password.value, passwordRepeat.value);
     router.push('/');
   } catch (error) {
-    //console.log(error.response.data.password);
-    error.response.data.password.forEach(item => {
-	console.log("password: "+item);
-    });
-    error.response.data.username.forEach(item => {
-        console.log("username: "+item);
-    });
-    error.response.data.email.forEach(item => {
-        console.log("email: "+item);
-    });
-  }
+	if (error.response.data){
+	    //console.log(error.response.data.password);
+	    error.response.data.password.forEach(item => {
+		console.log("password: "+item);
+	    });
+	    error.response.data.username.forEach(item => {
+	        console.log("username: "+item);
+	    });
+	    error.response.data.email.forEach(item => {
+	        console.log("email: "+item);
+            });
+    	}else{
+	 console.log("There are an undefined error in yuour query")
+	}  
+}
 };
 
 </script>
