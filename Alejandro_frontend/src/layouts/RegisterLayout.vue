@@ -50,7 +50,16 @@ const register = async () => {
     await auth.register(email.value, password.value, passwordRepeat.value);
     router.push('/');
   } catch (error) {
-    console.log(error.message);
+    //console.log(error.response.data.password);
+    error.response.data.password.forEach(item => {
+	console.log("password: "+item);
+    });
+    error.response.data.username.forEach(item => {
+        console.log("username: "+item);
+    });
+    error.response.data.email.forEach(item => {
+        console.log("email: "+item);
+    });
   }
 };
 

@@ -12,7 +12,6 @@ export default {
   },
   register(email, password, password2) {
     let username = email
-    console.log(password2)
     const user = { username, email, password, password2 };
     return axios.post("/api/register/", user);
   },
