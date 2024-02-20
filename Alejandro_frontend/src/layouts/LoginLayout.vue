@@ -63,7 +63,9 @@ input{
   padding: 2rem;
 }
 .title {
-  text-align: center;
+  display: block;
+  width: 45%;
+  margin: auto;
 }
 .form {
   margin: 3rem auto;
