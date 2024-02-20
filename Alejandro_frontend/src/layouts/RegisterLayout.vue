@@ -94,7 +94,7 @@ const register = async () => {
 }
 .title {
   text-align: center;
-  color: $color-jakincode;
+  color: $color-jakinCode;
 }
 .form {
   margin: 3rem auto;
@@ -104,7 +104,7 @@ const register = async () => {
   width: 20%;
   min-width: 350px;
   max-width: 100%;
-  background: $color-jakincode;
+  background: $color-jakinCode;
   border-radius: 15px;
   padding: 40px;
   box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.3);
@@ -132,7 +132,7 @@ const register = async () => {
 .form-submit {
   background: white;
   border: none;
-  color: $color-jakincode;
+  color: $color-jakinCode;
   margin-top: 3rem;
   padding: 1rem 0;
   border-radius: 15px;

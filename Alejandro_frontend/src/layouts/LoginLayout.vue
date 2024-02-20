@@ -60,6 +60,7 @@ const login = async () => {
 }
 .title {
   text-align: center;
+  color: $color-jakinCode;
 }
 .form {
   margin: 3rem auto;
@@ -69,8 +70,8 @@ const login = async () => {
   width: 20%;
   min-width: 350px;
   max-width: 100%;
-  background: rgba(19, 35, 47, 0.9);
-  border-radius: 5px;
+  background: $color-jakinCode;
+  border-radius: 15px;
   padding: 40px;
   box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.3);
 }
@@ -88,21 +89,24 @@ const login = async () => {
   background-image: none;
   border: 1px solid white;
   color: white;
+  border-radius: 15px;
   &:focus {
     outline: 0;
-    border-color: #1ab188;
+    border-color: $color-jakinLight;
   }
 }
 .form-submit {
-  background: #1ab188;
+  background: white;
   border: none;
-  color: white;
+  color: $color-jakinCode;
   margin-top: 3rem;
   padding: 1rem 0;
+  border-radius: 15px;
   cursor: pointer;
   transition: background 0.2s;
   &:hover {
-    background: #0b9185;
+    background:$color-jakinLight;
+    color:black;
   }
 }
 .error {

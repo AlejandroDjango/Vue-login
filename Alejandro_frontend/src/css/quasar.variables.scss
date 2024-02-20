@@ -12,17 +12,38 @@
 // to match your app's branding.
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
-$primary   : #1976D2;
-$secondary : #26A69A;
-$accent    : #9C27B0;
+$primary: #1976d2;
+$secondary: #26a69a;
+$accent: #9c27b0;
 
-$dark      : #1D1D1D;
-$dark-page : #121212;
+$dark: #1d1d1d;
+$dark-page: #121212;
 
-$positive  : #21BA45;
-$negative  : #C10015;
-$info      : #31CCEC;
-$warning   : #F2C037;
+$positive: #21ba45;
+$negative: #c10015;
+$info: #31ccec;
+$warning: #f2c037;
 
-$color-jakincode: #165086;
-$color-jakinLight: #22dbff
+$color-jakinCode: #165086;
+$color-jakinLight: #22dbff;
+
+$color-jakinCode-var: #22dbff;
+$color-jakinLight-var: #165086;
+
+
+// @mixin theme-colors($light-theme: true){
+//   @if $light-theme {
+//     background-color: $color-jakinCode-var;
+//     color: $color-jakinLight-var;
+//   } @else {
+//     background-color: $color-jakinCode;
+//     color: $color-jakinLight;
+//   }
+// }
+
+// body {
+//   @include theme-colors($light-theme: true);
+//   body.dark & {
+//     @include theme-colors($light-theme: false);
+//   }
+// }
