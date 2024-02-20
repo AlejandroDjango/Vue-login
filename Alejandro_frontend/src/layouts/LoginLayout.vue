@@ -34,6 +34,7 @@
 <script setup>
 import auth from "src/auth";
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 
 const email = ref("");
 const password = ref("");
