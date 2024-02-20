@@ -15,8 +15,8 @@ export default {
     const user = { username, email, password, password2 };
     return axios.post("/api/register/", user);
   },
-  login(email, password) {
-    const user = { email, password };
+  login(username, password) {
+    const user = { username, password };
     return axios.post("/api/token/", user);
   },
 };

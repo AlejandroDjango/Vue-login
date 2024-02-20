@@ -2,14 +2,14 @@
   <div class="login">
     <img class="title" src="src/assets/logo-jakin-code.97e3f1b4.png" alt="Login in the page">
     <form action class="form" @submit.prevent="login">
-      <label class="form-label" for="#email">Email:</label>
+      <label class="form-label" for="#username">username:</label>
       <input
-        v-model="email"
+        v-model="username"
         class="form-input"
-        type="email"
-        id="email"
+        type="username"
+        id="username"
         required
-        placeholder="Email"
+        placeholder="Username"
       />
       <label class="form-label" for="#password">Password:</label>
       <input
@@ -20,7 +20,7 @@
         placeholder="Password"
       />
       <p v-if="error" class="error">
-        Has introducido mal el email o la contraseña.
+        Has introducido mal el username o la contraseña.
       </p>
       <input class="form-submit" type="submit" value="Login" />
     </form>
@@ -36,15 +36,15 @@ import auth from "src/auth";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 
-const email = ref("");
+const username = ref("");
 const password = ref("");
 const error = ref(false);
 
 const login = async () => {
   try {
-    await auth.login(email.value, password.value);
+    await auth.login(username.value, password.value);
     const user = {
-      email: email.value,
+      username: username.value,
     };
     auth.setUserLogged(user);
     this.$router.push("/");
