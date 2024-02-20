@@ -55,10 +55,6 @@ const login = async () => {
 </script>
 
 <style lang="scss" scoped>
-input{
-  background: white;
-  color: black;
-}
 .login {
   padding: 2rem;
 }
@@ -90,10 +86,10 @@ input{
 }
 .form-input {
   padding: 10px 15px;
-  background: none;
   background-image: none;
   border: 1px solid white;
-  color: white;
+  background: white;
+  color: black;
   border-radius: 15px;
   &:focus {
     outline: 0;
