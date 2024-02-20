@@ -2,7 +2,7 @@
   <div class="login">
     <img class="title" src="src/assets/logo-jakin-code.97e3f1b4.png" alt="Login in the page">
     <form action class="form" @submit.prevent="login">
-      <label class="form-label" for="#username">username:</label>
+      <label class="form-label" for="#username">Username:</label>
       <input
         v-model="username"
         class="form-input"
