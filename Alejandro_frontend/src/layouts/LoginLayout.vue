@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <h1 class="title">Login in the page</h1>
+    <img class="title" src="src/assets/logo-jakin-code.97e3f1b4.png" alt="Login in the page">
     <form action class="form" @submit.prevent="login">
       <label class="form-label" for="#email">Email:</label>
       <input
@@ -55,12 +55,15 @@ const login = async () => {
 </script>
 
 <style lang="scss" scoped>
+input{
+  background: white;
+  color: black;
+}
 .login {
   padding: 2rem;
 }
 .title {
   text-align: center;
-  color: $color-jakinCode;
 }
 .form {
   margin: 3rem auto;

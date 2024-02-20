@@ -89,6 +89,10 @@ const register = async () => {
 </script>
 
 <style lang="scss" scoped>
+input{
+  background: white;
+  color: black;
+}
 .register {
   padding: 2rem;
 }
