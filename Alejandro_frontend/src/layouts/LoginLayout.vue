@@ -29,6 +29,7 @@
       <router-link to="/register">Regístrate</router-link>
     </p>
   </div>
+  <popupComp :isOpen="isOpen" :message="message" @modal-close="closeModal" />
 </template>
 
 <script setup>
