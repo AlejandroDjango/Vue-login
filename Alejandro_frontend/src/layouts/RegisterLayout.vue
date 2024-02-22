@@ -38,7 +38,7 @@
 <script setup>
 import auth from "src/auth";
 import { ref } from "vue";
-import { useRouter } from "vue-router";
+import { router } from "src/router";
 
 // Popup constants and functions
 import popupComp from "src/components/popupComp.vue";
@@ -48,6 +48,7 @@ const addToMessage = (string) => {
   message.value.push(string);
 };
 const openModal = () => {
+  
   isOpen.value = true;
 };
 const closeModal = () => {
@@ -55,7 +56,6 @@ const closeModal = () => {
 };
 // End Popup constants and functions
 
-const router = useRouter();
 const email = ref("");
 const password = ref("");
 const passwordRepeat = ref("");

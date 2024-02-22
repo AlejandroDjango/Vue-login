@@ -35,7 +35,7 @@
 <script setup>
 import auth from "src/auth";
 import { ref } from "vue";
-import { useRouter } from "vue-router";
+import { router } from "src/router";
 
 // Popup constants and functions
 import popupComp from "src/components/popupComp.vue";
@@ -52,7 +52,6 @@ const closeModal = () => {
 };
 // End Popup constants and functions
 
-const router = useRouter();
 const username = ref("");
 const password = ref("");
 const error = ref(false);

@@ -1,5 +1,5 @@
 import { route } from 'quasar/wrappers'
-import { createRouter, createMemoryHistory, createWebHistory, createWebHashHistory } from 'vue-router'
+import { createRouter, createMemoryHistory, createWebHistory, createWebHashHistory, useRouter} from 'vue-router'
 import routes from './routes'
 
 /*
@@ -11,7 +11,7 @@ import routes from './routes'
  * with the Router instance.
  */
 
-export default route(function () {
+route(function () {
   const createHistory = process.env.SERVER
     ? createMemoryHistory
     : (process.env.VUE_ROUTER_MODE === 'history' ? createWebHistory : createWebHashHistory)
@@ -28,3 +28,7 @@ export default route(function () {
 
   return Router
 })
+
+const router = useRouter()
+
+export default {route, router}
