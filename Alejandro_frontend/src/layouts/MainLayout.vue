@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-
+    <navigation />
     <h1>Home</h1>
     <p v-if="userLogged">User loggued: {{ userLogged }}</p>
   </div>
