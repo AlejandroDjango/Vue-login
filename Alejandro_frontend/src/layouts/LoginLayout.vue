@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <img class="title" src="src/assets/logo-jakin-code.97e3f1b4.png" alt="Login in the page">
+    <img class="jakinCode" src="src/assets/logo-jakin-code.97e3f1b4.png" alt="Login in the page">
     <form action class="form" @submit.prevent="login">
       <label class="form-label" for="#username">Username:</label>
       <input
@@ -75,7 +75,7 @@ const login = async () => {
 .login {
   padding: 2rem;
 }
-.title {
+.jakinCode {
   display: block;
   width: 45%;
   margin: auto;

@@ -1,6 +1,7 @@
 <template>
   <div class="register">
-    <h1 class="title">Sign Up</h1>
+    <img class="jakinCode" src="src/assets/logo-jakin-code.97e3f1b4.png" alt="Sign Up">
+    <h3 class="title">Sign Up</h3>
     <form action class="form" @submit.prevent="register">
       <label class="form-label" for="#email">Email:</label>
       <input
@@ -10,6 +11,15 @@
         id="email"
         required
         placeholder="Email"
+      />
+      <label class="form-label" for="#username">Username:</label>
+      <input
+        v-model="email"
+        class="form-input"
+        type="text"
+        id="username"
+        required
+        placeholder="Username"
       />
       <label class="form-label" for="#password">Password:</label>
       <input
@@ -57,12 +67,13 @@ const closeModal = () => {
 // End Popup constants and functions
 
 const email = ref("");
+const username = ref("");
 const password = ref("");
 const passwordRepeat = ref("");
 
 const register = async () => {
   try {
-    await auth.register(email.value, password.value, passwordRepeat.value);
+    await auth.register(email.value, username.value, password.value, passwordRepeat.value);
     router.push("/");
   } catch (error) {
     if (error.response.data) {
@@ -94,6 +105,11 @@ const register = async () => {
 .title {
   text-align: center;
   color: $color-jakinCode;
+}
+.jakinCode {
+  display: block;
+  width: 45%;
+  margin: auto;
 }
 .form {
   margin: 3rem auto;
