@@ -66,7 +66,6 @@ const register = async () => {
     router.push("/");
   } catch (error) {
     if (error.response.data) {
-      //console.log(error.response.data.password);
       error.response.data.password.forEach((item) => {
         console.log("password: " + item);
         addToMessage("password: " + item);

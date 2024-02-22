@@ -36,6 +36,21 @@ import auth from "src/auth";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 
+// Popup constants and functions
+import popupComp from "src/components/popupComp.vue";
+const message = ref([]);
+const isOpen = ref(false);
+const addToMessage = (string) => {
+  message.value.push(string);
+};
+const openModal = () => {
+  isOpen.value = true;
+};
+const closeModal = () => {
+  isOpen.value = false;
+};
+// End Popup constants and functions
+
 const router = useRouter();
 const username = ref("");
 const password = ref("");
