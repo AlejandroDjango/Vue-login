@@ -62,7 +62,7 @@ const login = async () => {
     const user = {
       username: username.value,
     };
-    auth.setUserLogged(user);
+    auth.setUserLogged(user.username);
     router.push("/");
   } catch (error) {
     console.log(error);
