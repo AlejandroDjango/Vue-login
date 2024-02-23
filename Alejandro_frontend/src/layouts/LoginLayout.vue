@@ -84,7 +84,7 @@ const login = async () => {
     router.push("/");
   } catch (error) {
     console.log(error.response.data);
-    addToMessage(error.response.data);
+    addToMessage(error.response.data.detail);
     openModal();
   }
 };
