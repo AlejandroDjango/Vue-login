@@ -165,4 +165,10 @@ const login = async () => {
   margin-top: 3rem;
   text-align: center;
 }
+
+@media only screen and (max-width: 1080px) {
+  .party{
+    visibility: hidden;
+  }
+}
 </style>
