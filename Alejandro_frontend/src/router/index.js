@@ -11,7 +11,7 @@ import routes from './routes'
  * with the Router instance.
  */
 
-route(function () {
+export default route(function () {
   const createHistory = process.env.SERVER
     ? createMemoryHistory
     : (process.env.VUE_ROUTER_MODE === 'history' ? createWebHistory : createWebHashHistory)
@@ -28,7 +28,3 @@ route(function () {
 
   return Router
 })
-
-const router = useRouter()
-
-export default {route, router}
