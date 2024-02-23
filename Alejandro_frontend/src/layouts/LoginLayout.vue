@@ -84,17 +84,7 @@ const login = async () => {
     router.push("/");
   } catch (error) {
     console.log(error.response.data);
-    if (error.response.data) {
-      if (error.response.data.detail) {
-        error.response.data.detail.forEach((item) => {
-          console.log("detail: " + item);
-          addToMessage("detail: " + item);
-        });
-      }
-    } else {
-      console.log("There are an undefined error in yuour query");
-      addToMessage("error: There are an undefined error in yuour query");
-    }
+    addToMessage(error.response.data);
     openModal();
   }
 };
