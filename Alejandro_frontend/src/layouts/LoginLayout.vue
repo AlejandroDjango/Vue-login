@@ -73,7 +73,6 @@ const closeModal = () => {
 const router = useRouter();
 const username = ref("");
 const password = ref("");
-const error = ref(false);
 
 const login = async () => {
   try {
@@ -84,8 +83,19 @@ const login = async () => {
     auth.setUserLogged(user.username);
     router.push("/");
   } catch (error) {
-    console.log(error);
-    error.value = true;
+    console.log(error.response.data);
+    if (error.response.data) {
+      if (error.response.data.detail) {
+        error.response.data.detail.forEach((item) => {
+          console.log("detail: " + item);
+          addToMessage("detail: " + item);
+        });
+      }
+    } else {
+      console.log("There are an undefined error in yuour query");
+      addToMessage("error: There are an undefined error in yuour query");
+    }
+    openModal();
   }
 };
 </script>
