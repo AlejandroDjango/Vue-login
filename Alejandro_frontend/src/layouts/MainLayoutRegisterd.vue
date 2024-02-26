@@ -17,7 +17,10 @@ const { t } = useI18n()
 const Home = ref(t('Home'))
 
 const userLogged = computed(() => {
-  return auth.getUserLogged();
+  return auth.getAll();
+});
+const group = computed(() => {
+  return "en proceso"
 });
 
 onMounted(

@@ -25,6 +25,9 @@ export default {
     setToken(token);
     setRefresh(refresh);
   },
+  getAll() {
+    return Cookies.get("userLogged", "token", "token-refresh");
+  },
   register(email, username, password, password2) {
     const user = { username, email, password, password2 };
     return axios.post("/api/register/", user);

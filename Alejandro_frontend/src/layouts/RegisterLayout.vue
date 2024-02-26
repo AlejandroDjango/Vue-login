@@ -96,7 +96,7 @@ const register = async () => {
       password.value,
       passwordRepeat.value
     );
-    router.push("/");
+    router.push("/login");
   } catch (error) {
     console.log(error.response.data);
     if (error.response.data) {

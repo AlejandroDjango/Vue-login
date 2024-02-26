@@ -14,7 +14,11 @@ const routes = [
     path: '/register',
     component: () => import('src/layouts/RegisterLayout.vue'),
   },
-
+  {
+    name: 'main',
+    path: '/main',
+    component: () => import('src/layouts/MainLayoutRegisterd.vue'),
+  },
 
   // Always leave this as last one,
   // but you can also remove it

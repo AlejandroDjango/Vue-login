@@ -79,7 +79,7 @@ const login = async () => {
   try {
     const data = await auth.login(username.value, password.value);
     auth.setAll(username.value, data.token, data.refresh)
-    router.push("/");
+    router.push("/main");
   } catch (error) {
     console.log(error.response.data);
     addToMessage(error.response.data.detail);
