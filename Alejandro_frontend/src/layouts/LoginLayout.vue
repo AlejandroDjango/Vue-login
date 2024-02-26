@@ -81,7 +81,7 @@ const login = async () => {
     auth.setAll(username.value, data.token, data.refresh)
     router.push("/main");
   } catch (error) {
-    if (error.response.data) {
+    if (error.response) {
       console.log(error.response.data);
       addToMessage(error.response.data.detail);
       openModal();
