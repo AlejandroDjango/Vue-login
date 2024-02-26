@@ -79,6 +79,8 @@ const login = async () => {
   try {
     const data = await auth.login(username.value, password.value);
     console.log(data);
+    console.log(data.access);
+    console.log(data.refresh);
     auth.setAll(username.value, data.access, data.refresh)
     router.push("/main");
   } catch (error) {
