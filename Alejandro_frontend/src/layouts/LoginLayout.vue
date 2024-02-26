@@ -85,6 +85,9 @@ const login = async () => {
       console.log(error.response.data);
       addToMessage(error.response.data.detail);
       openModal();
+    } else {
+      console.log("There are an undefined error in yuour query");
+      addToMessage("error: There are an undefined error in yuour query");
     }
   }
 };
