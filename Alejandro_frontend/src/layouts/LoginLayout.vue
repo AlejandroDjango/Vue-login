@@ -81,9 +81,11 @@ const login = async () => {
     auth.setAll(username.value, data.token, data.refresh)
     router.push("/main");
   } catch (error) {
-    console.log(error.response.data);
-    addToMessage(error.response.data.detail);
-    openModal();
+    if (error.response.data) {
+      console.log(error.response.data);
+      addToMessage(error.response.data.detail);
+      openModal();
+    }
   }
 };
 </script>
