@@ -78,7 +78,7 @@ const login = async () => {
   message.value =  []
   try {
     const data = await auth.login(username.value, password.value);
-    console.log(data);
+    console.log(data.data);
     console.log(data.access);
     console.log(data.refresh);
     auth.setAll(username.value, data.access, data.refresh)
