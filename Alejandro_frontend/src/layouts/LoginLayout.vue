@@ -75,12 +75,10 @@ const username = ref("");
 const password = ref("");
 
 const login = async () => {
+  message.value =  []
   try {
-    await auth.login(username.value, password.value);
-    const user = {
-      username: username.value,
-    };
-    auth.setUserLogged(user.username);
+    const data = await auth.login(username.value, password.value);
+    auth.setAll(username.value, data.token, data.refresh)
     router.push("/");
   } catch (error) {
     console.log(error.response.data);

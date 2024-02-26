@@ -88,6 +88,7 @@ const password = ref("");
 const passwordRepeat = ref("");
 
 const register = async () => {
+  message.value =  []
   try {
     await auth.register(
       email.value,

@@ -1,14 +1,29 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-
-
 export default {
   setUserLogged(userLogged) {
     Cookies.set("userLogged", userLogged);
   },
   getUserLogged() {
     return Cookies.get("userLogged");
+  },
+  setToken(token) {
+    Cookies.set("token", token);
+  },
+  getToken() {
+    return Cookies.get("token");
+  },
+  setRefresh(token) {
+    Cookies.set("token-refresh", token);
+  },
+  getRefresh() {
+    return Cookies.get("token-refresh");
+  },
+  setAll(user, token, refresh) {
+    setUserLogged(user);
+    setToken(token);
+    setRefresh(refresh);
   },
   register(email, username, password, password2) {
     const user = { username, email, password, password2 };
