@@ -23,9 +23,6 @@ const group = computed(() => {
   return "en proceso"
 });
 
-onMounted(
-  // blalala
-)
 
 
 </script>
