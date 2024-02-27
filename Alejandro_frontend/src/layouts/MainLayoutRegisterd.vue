@@ -3,6 +3,8 @@
     <navigation />
     <h1>  {{ Home }}</h1>
     <p v-if="userLogged">User loggued: {{ userLogged }}</p>
+    <p v-if="userLogged">User token: {{ token }}</p>
+    <p v-if="userLogged">User refresh: {{ refresh }}</p>
     <p v-if="group">User Group: {{ group }}</p>
   </div>
 </template>
@@ -17,7 +19,13 @@ const { t } = useI18n()
 const Home = ref(t('Home'))
 
 const userLogged = computed(() => {
-  return auth.getUserLogged()+" token: "+auth.getToken()+" refresh: "+auth.getRefresh();
+  return auth.getUserLogged()
+});
+const token = computed(() => {
+  return auth.getToken()
+});
+const refresh = computed(() => {
+  return auth.getRefresh()
 });
 const group = computed(() => {
   return "en proceso"
