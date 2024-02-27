@@ -17,7 +17,7 @@ const { t } = useI18n()
 const Home = ref(t('Home'))
 
 const userLogged = computed(() => {
-  return auth.getUserLogged()+" "+auth.getToken()+" "+auth.getRefresh();
+  return auth.getUserLogged()+" token: "+auth.getToken()+" refresh: "+auth.getRefresh();
 });
 const group = computed(() => {
   return "en proceso"
