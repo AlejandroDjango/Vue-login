@@ -3,8 +3,8 @@
     <navigation />
     <h1>  {{ Home }}</h1>
     <p v-if="userLogged">User loggued: {{ userLogged }}</p>
-    <p v-if="userLogged">User token: {{ token }}</p>
-    <p v-if="userLogged">User refresh: {{ refresh }}</p>
+    <p v-if="token">User token: {{ token }}</p>
+    <p v-if="refresh">User refresh: {{ refresh }}</p>
     <p v-if="group">User Group: {{ group }}</p>
   </div>
 </template>
