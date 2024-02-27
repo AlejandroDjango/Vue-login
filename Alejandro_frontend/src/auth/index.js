@@ -23,7 +23,6 @@ export default {
   setAll(user, token, refresh) {
     setUserLogged(user);
     setToken(token);
-    setRefresh(refresh);
   },
   getAll() {
     return Cookies.get("userLogged", "token", "token-refresh");
