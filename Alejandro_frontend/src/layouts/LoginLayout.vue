@@ -78,9 +78,6 @@ const login = async () => {
   message.value =  []
   try {
     const data = await auth.login(username.value, password.value);
-    console.log(data.data);
-    console.log(data.data.access);
-    console.log(data.data.refresh);
     auth.setAll(username.value, data.data.access, data.data.refresh)
     router.push("/main");
   } catch (error) {
@@ -88,10 +85,7 @@ const login = async () => {
       console.log(error.response.data);
       addToMessage(error.response.data.detail);
       openModal();
-    } else {
-      console.log("There are an undefined error in yuour query");
-      addToMessage("error: There are an undefined error in yuour query");
-    }
+    } 
   }
 };
 </script>
