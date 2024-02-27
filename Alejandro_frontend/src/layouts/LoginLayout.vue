@@ -79,8 +79,8 @@ const login = async () => {
   try {
     const data = await auth.login(username.value, password.value);
     auth.setUserLogged(username.value);
-    auth.setToken(value.value.token);
-    auth.setRefresh(value.value.refresh);
+    auth.setToken(data.data.token);
+    auth.setRefresh(data.data.refresh)
     router.push("/main");
   } catch (error) {
     console.log(error);
