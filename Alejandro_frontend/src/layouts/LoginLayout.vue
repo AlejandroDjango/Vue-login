@@ -78,6 +78,7 @@ const login = async () => {
   message.value =  []
   try {
     const data = await auth.login(username.value, password.value);
+    console.log(data);
     auth.setUserLogged(username.value);
     auth.setToken(data.data.access);
     auth.setRefresh(data.data.refresh)
