@@ -1,5 +1,4 @@
 import axios from "axios";
-import { api } from "axios";
 import Cookies from "js-cookie";
 
 export default {
@@ -37,6 +36,6 @@ export default {
     return axios.post("/api/token/", user);
   },
   getUser(username){
-    return axios.api.get("/api/users/?search=${username}");
+    return axios.get("/api/users/?search=${username}");
   }
 };
