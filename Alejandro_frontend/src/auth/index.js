@@ -36,6 +36,6 @@ export default {
     return axios.post("/api/token/", user);
   },
   getUser(username){
-    return axios.get("/api/users/?search=${username}");
+    return axios.api.get("/api/users/?search=${username}");
   }
 };
