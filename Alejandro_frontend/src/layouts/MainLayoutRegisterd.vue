@@ -28,6 +28,8 @@ const refresh = computed(() => {
   return auth.getRefresh()
 });
 const group = computed(() => {
+  const data = auth.getUser(userLogged)
+  console.log(data)
   return "en proceso"
 });
 

@@ -35,4 +35,7 @@ export default {
     const user = { username, password };
     return axios.post("/api/token/", user);
   },
+  getUser(username){
+    return axios.post("/api/users/?search=",username);
+  }
 };
