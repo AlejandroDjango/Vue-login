@@ -2,7 +2,7 @@
 # Jakinsuma
 * [Home](jakinsuma_home)
 * [Añadir backup](anadir_backup)
-* [Notas para Desarrollo](notas_para_dessarrollo)
+* [Notas para Desarrollo](notas_para_desarrollo)
 * [Preparación del entorno de Despliegue](preparacion_del_entorno)
 > * [Docker](docker)
 > * [Nginx](nginx)
