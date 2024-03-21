@@ -86,7 +86,7 @@ const config = {
             items: [
               {
                 label: 'Instalate',
-                to: '/docs/instalaion-node',
+                to: 'instalaion-node',
               },
             ],
           },
