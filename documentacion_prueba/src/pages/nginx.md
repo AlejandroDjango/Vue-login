@@ -11,14 +11,14 @@
    `sudo ufw allow 'Nginx HTTP'`
 2. En el directorio `/etc/nginx/sites-available` debemos crear el archivo `sgsi-demo` en este archivo debemos introducir el siguiente código (poniendo el {NOMBRE-DEL-DOMINIO} correcto):
 
-```plaintext
+```
 server {
     # Puerto de escucha
     listen   80;
 
     # Nombre del servidor (si no tenemos que poner SSL puede ser lo que queramos, si usamos SSL tenemos que
     # registrar un dominio
-    server_name {NOMBRE-DEL-DOMINO};
+    server_name (NOMBRE-DEL-DOMINO};
 
     # Tamaño máximo del cuerpo del cliente 100MB
     client_max_body_size 100M;
@@ -60,7 +60,7 @@ server {
 
    Si todo va bien obtendremos:
 
-   ```plaintext
+   ```
    nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
    nginx: configuration file /etc/nginx/nginx.conf test is successful
    ```
@@ -83,7 +83,7 @@ server {
 
    Quedando el código así
 
-```plaintext
+```
 server {
     # Puerto de escucha
     listen   80;
@@ -137,7 +137,7 @@ server {
 
 Este código lo podemos retocar para mejorar la legibilidad:
 
-```plaintext
+```
 server {
     # Puerto de escucha
     listen 80;

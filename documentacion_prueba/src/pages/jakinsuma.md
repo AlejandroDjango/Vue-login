@@ -5,5 +5,5 @@
 * [Notas para Desarrollo](notas_para_dessarrollo)
 * [Preparación del entorno de Despliegue](preparacion_del_entorno)
 > * [Docker](docker)
-> * [Nginx](nginx-page)
+> * [Nginx](nginx)
 > * [Sonar-Cloud](sonarcloud)
