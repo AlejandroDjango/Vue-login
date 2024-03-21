@@ -9,7 +9,7 @@
 1. Si tenemos ufw activado deberemos dejar pasar a nginx:
 
    `sudo ufw allow 'Nginx HTTP'`
-2. En el directorio `/etc/nginx/sites-available` debemos crear el archivo `sgsi-demo` en este archivo debemos introducir el siguiente código (poniendo el {NOMBRE-DEL-DOMINIO} correcto):
+2. En el directorio `/etc/nginx/sites-available` debemos crear el archivo `sgsi-demo` en este archivo debemos introducir el siguiente código (poniendo el `{NOMBRE-DEL-DOMINIO}` correcto):
 
 ```
 server {
