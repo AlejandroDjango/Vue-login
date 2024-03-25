@@ -8,11 +8,13 @@ El primer paso es configurar el entorno `.env` en este fichero será necesario r
 - El esquema `SCHEMA` no es  necesario cambiarlo.
 - El token de GitLab.
 - El nombre de la base de datos.
-- La contraseña del usuario de la base de datos
-- El nombre del usuario de la base de datos
-- La clave de DJango.
+- La contraseña del usuario de la base de datos. (20 caracteres)
+- El nombre del usuario de la base de datos.
+- La clave de DJango. (50 caracteres)
 
 ## Preparación del servidor
+
+Es necesario comprimir la carpeta `server`, subirla y darle permisos de ejecución con `chmod +x preprara_server.sh`.
 
 El segundo paso es ejecutar el script `preparar_server.sh` este se encargará de realizar las acciones necesarias para tener el servidor listo para poner en marcha, las acciones que realizará son las siguientes:
 
