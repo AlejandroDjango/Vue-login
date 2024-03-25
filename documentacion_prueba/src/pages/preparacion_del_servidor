@@ -1,0 +1,29 @@
+# Preparación del servidor
+
+## Configuración del entorno
+
+El primer paso es configurar el entorno `.env` en este fichero será necesario rellenar el fichero con los datos correspondientes. Se empezará añadiendo;
+
+- La página web del proyecto.
+- El esquema `SCHEMA` no es  necesario cambiarlo.
+- El token de GitLab.
+- El nombre de la base de datos.
+- La contraseña del usuario de la base de datos
+- El nombre del usuario de la base de datos
+- La clave de DJango.
+
+## Preparación del servidor
+
+El segundo paso es ejecutar el script `preparar_server.sh` este se encargará de realizar las acciones necesarias para tener el servidor listo para poner en marcha, las acciones que realizará son las siguientes:
+
+- Iniciar el entorno antes configurado.
+- Crear las carpetas necesarias.
+- Guardar las variables del entorno en `/secrets`.
+- Dar los permisos necesarios a todas las carpetas antes creadas.
+- Borrar todo lo relacionado con `Docker` e instalar las aplicaciones necesarias.
+- Crear grupo y añadir usuarios para `Docker`.
+- Modificar el firewall, para poder usar `Nginx`
+-Configurar `Nginx` usando la configuración que se encuentra en `http_nginx`.
+- Configurar `Certbot` usando la configuración que se encuentra en `https_nginx`.
+- Configurar `gitlab-runner`.
+- Instalar los servicios de `JakinSuma`
