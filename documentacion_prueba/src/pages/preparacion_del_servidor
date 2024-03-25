@@ -23,7 +23,7 @@ El segundo paso es ejecutar el script `preparar_server.sh` este se encargará de
 - Borrar todo lo relacionado con `Docker` e instalar las aplicaciones necesarias.
 - Crear grupo y añadir usuarios para `Docker`.
 - Modificar el firewall, para poder usar `Nginx`
--Configurar `Nginx` usando la configuración que se encuentra en `http_nginx`.
+- Configurar `Nginx` usando la configuración que se encuentra en `http_nginx`.
 - Configurar `Certbot` usando la configuración que se encuentra en `https_nginx`.
 - Configurar `gitlab-runner`.
 - Instalar los servicios de `JakinSuma`
